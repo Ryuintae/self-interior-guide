@@ -4,29 +4,31 @@ export default function HomePage() {
     const navigate = useNavigate();
 
     return (
-        <main className="min-h-screen bg-slate-50 px-6 py-10">
-            <div className="mx-auto max-w-3xl">
-                <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-200">
-                    <p className="text-sm font-semibold text-blue-600">
+        <main className="min-h-screen bg-[#f6f7fb] px-4 py-6 sm:px-6 sm:py-8">
+            <div className="mx-auto max-w-6xl">
+                <section className="rounded-[32px] bg-white px-6 py-8 shadow-[0_10px_30px_rgba(15,23,42,0.05)] ring-1 ring-black/5 sm:px-10 sm:py-10">
+                    <p className="text-[13px] font-semibold text-blue-600">
                         SELF INTERIOR GUIDE
                     </p>
 
-                    <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">
+                    <h1 className="mt-3 text-[34px] font-bold leading-tight tracking-[-0.04em] text-slate-950 sm:text-[52px]">
                         처음 하는 셀프 인테리어,
                         <br />
-                        어디서부터 시작할지 알려드릴게요.
+                        단순 정보 말고
+                        <br />
+                        내 상황에 맞게 정리해드릴게요.
                     </h1>
 
-                    <p className="mt-4 text-base leading-7 text-slate-600">
-                        초보자를 위한 단계별 가이드와, 나중에 확장될 공간 기반 견적
-                        기능까지 연결하는 셀프 인테리어 서비스입니다.
+                    <p className="mt-5 max-w-2xl text-[16px] leading-8 text-slate-600">
+                        공간과 작업 범위를 선택하고, 현재 상황을 간단히 진단하면 지금 가장
+                        먼저 봐야 할 단계들을 맞춤형으로 보여드려요.
                     </p>
 
-                    <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                         <button
                             type="button"
                             onClick={() => navigate("/guide")}
-                            className="rounded-2xl bg-slate-900 px-5 py-4 text-sm font-semibold text-white transition hover:opacity-90"
+                            className="rounded-[20px] bg-slate-950 px-5 py-4 text-[15px] font-semibold text-white transition hover:opacity-90"
                         >
                             가이드 시작하기
                         </button>
@@ -34,12 +36,12 @@ export default function HomePage() {
                         <button
                             type="button"
                             onClick={() => navigate("/estimate")}
-                            className="rounded-2xl border border-slate-300 bg-white px-5 py-4 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+                            className="rounded-[20px] border border-slate-300 bg-white px-5 py-4 text-[15px] font-semibold text-slate-900 transition hover:bg-slate-50"
                         >
                             견적 만들기
                         </button>
                     </div>
-                </div>
+                </section>
             </div>
         </main>
     );

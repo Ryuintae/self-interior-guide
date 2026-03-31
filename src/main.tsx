@@ -1,11 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./app/router";
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-    <React.StrictMode>
+const rootElement = document.getElementById("root");
+
+if (!rootElement) {
+    throw new Error("root element를 찾을 수 없습니다.");
+}
+
+createRoot(rootElement).render(
+    <StrictMode>
         <RouterProvider router={router} />
-    </React.StrictMode>
+    </StrictMode>
 );

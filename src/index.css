@@ -15,6 +15,14 @@ body {
             BlinkMacSystemFont,
             "Segoe UI",
             sans-serif;
-    background-color: #f8fafc;
+    background: #f6f7fb;
     color: #0f172a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
 }
