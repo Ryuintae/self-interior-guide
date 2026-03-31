@@ -4,7 +4,7 @@ type PageShellProps = {
     eyebrow?: string;
     title: string;
     description?: string;
-    headerAction?: ReactNode;
+    headerAction?: React.ReactElement | null;
     children?: ReactNode;
 };
 
