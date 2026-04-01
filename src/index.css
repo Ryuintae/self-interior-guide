@@ -26,3 +26,36 @@ body {
 button {
     cursor: pointer;
 }
+.home-hero-swiper .swiper-pagination {
+    bottom: 24px !important;
+}
+
+.home-hero-swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.45);
+    opacity: 1;
+    transition: all 0.25s ease;
+}
+
+.home-hero-swiper .swiper-pagination-bullet-active {
+    width: 28px;
+    border-radius: 9999px;
+    background: #ffffff;
+}
+
+.home-hero-swiper .swiper-button-prev,
+.home-hero-swiper .swiper-button-next {
+    width: 46px;
+    height: 46px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.14);
+    color: white;
+    backdrop-filter: blur(8px);
+}
+
+.home-hero-swiper .swiper-button-prev::after,
+.home-hero-swiper .swiper-button-next::after {
+    font-size: 16px;
+    font-weight: 700;
+}
