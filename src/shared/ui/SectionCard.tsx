@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 type SectionCardProps = {
     title?: string;
-    description?: string;
+    description?: ReactNode;
     children?: ReactNode;
     className?: string;
 };
@@ -26,7 +26,7 @@ export default function SectionCard({
                     ) : null}
 
                     {description ? (
-                        <p className="mt-2 text-sm leading-6 text-slate-600">
+                        <p className="mt-2 text-sm leading-6 text-slate-600 whitespace-pre-line">
                             {description}
                         </p>
                     ) : null}

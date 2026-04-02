@@ -224,7 +224,7 @@ export default function EstimatePage() {
                                 <div className="space-y-4">
                                     <SectionCard
                                         title="공간 선택"
-                                        description="먼저 어떤 공간을 바꾸고 싶은지 골라보세요."
+                                        description={"먼저 어떤 공간을 바꾸고 싶은지 \n골라보세요."}
                                     >
                                         <div className="grid gap-3">
                                             {roomOptions.map((room) => (
@@ -241,7 +241,7 @@ export default function EstimatePage() {
 
                                     <SectionCard
                                         title="벽 색상"
-                                        description="페인트 변경 느낌으로 벽 컬러를 바로 바꿔볼 수 있어요."
+                                        description={"페인트 변경 느낌으로 벽 컬러를 \n바로 바꿔볼 수 있어요."}
                                     >
                                         <div className="grid gap-3">
                                             {wallColors.map((color) => (
@@ -275,7 +275,7 @@ export default function EstimatePage() {
 
                                     <SectionCard
                                         title="가구 메인 컬러"
-                                        description="대표 가구 컬러를 바꾸는 방식으로 반영돼요."
+                                        description={"대표 가구 컬러를 바꾸는 방식으로 \n반영돼요."}
                                     >
                                         <div className="grid gap-3">
                                             {furnitureColors.map((color) => (
@@ -292,7 +292,7 @@ export default function EstimatePage() {
 
                                     <SectionCard
                                         title="빠른 액션"
-                                        description="현재 선택을 초기화하거나 다른 가이드로 돌아갈 수 있어요."
+                                        description={"현재 선택을 초기화하거나 다른 가이드로 \n돌아갈 수 있어요."}
                                     >
                                         <div className="flex flex-col gap-3">
                                             <button
