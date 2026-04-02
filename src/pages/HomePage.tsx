@@ -133,70 +133,35 @@ export default function HomePage() {
                         <div className="absolute bottom-[-80px] right-[-30px] h-60 w-60 rounded-full bg-fuchsia-400/15 blur-3xl" />
 
                         <div className="relative z-10 flex min-h-[500px] items-center px-6 py-8 sm:min-h-[540px] sm:px-8 sm:py-9 lg:min-h-[560px] lg:px-12">
-                            <div className="grid w-full gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
-                                <div className="max-w-3xl text-white">
-                                    <p className="text-[12px] font-semibold tracking-[0.18em] text-blue-200 sm:text-[13px]">
-                                        {currentSlide.label}
-                                    </p>
+                            <div className="w-full max-w-3xl text-white">
+                                <p className="text-[12px] font-semibold tracking-[0.18em] text-blue-200 sm:text-[13px]">
+                                    {currentSlide.label}
+                                </p>
 
-                                    <h1 className="mt-4 whitespace-pre-line text-[30px] font-bold leading-[1.12] tracking-[-0.045em] sm:text-[42px] lg:text-[43px]">
-                                        {currentSlide.title}
-                                    </h1>
+                                <h1 className="mt-4 whitespace-pre-line text-[30px] font-bold leading-[1.12] tracking-[-0.045em] sm:text-[42px] lg:text-[43px]">
+                                    {currentSlide.title}
+                                </h1>
 
-                                    <p className="mt-5 max-w-2xl text-[15px] leading-7 text-slate-200 sm:text-[16px] sm:leading-8 whitespace-pre-line">
-                                        {currentSlide.description}
-                                    </p>
+                                <p className="mt-5 max-w-2xl whitespace-pre-line text-[15px] leading-7 text-slate-200 sm:text-[16px] sm:leading-8">
+                                    {currentSlide.description}
+                                </p>
 
-                                    <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                                        <button
-                                            type="button"
-                                            onClick={() => navigate("/guide")}
-                                            className="rounded-[20px] bg-white px-5 py-3.5 text-[15px] font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-slate-100"
-                                        >
-                                            가이드 보기
-                                        </button>
+                                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                                    <button
+                                        type="button"
+                                        onClick={() => navigate("/guide")}
+                                        className="rounded-[20px] bg-white px-5 py-3.5 text-[15px] font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-slate-100"
+                                    >
+                                        가이드 보기
+                                    </button>
 
-                                        <button
-                                            type="button"
-                                            onClick={() => navigate("/estimate")}
-                                            className="rounded-[20px] border border-white/25 bg-white/10 px-5 py-3.5 text-[15px] font-semibold text-white backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-white/15"
-                                        >
-                                            견적 만들기
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div className="hidden lg:block">
-                                    <div className="mt-1 rounded-[26px] border border-white/15 bg-white/10 p-4 text-white backdrop-blur-xl shadow-[0_20px_50px_rgba(15,23,42,0.18)]">
-                                        <p className="text-sm font-semibold text-white/70">Quick Menu</p>
-
-                                        <div className="mt-3 space-y-3">
-                                            <button
-                                                type="button"
-                                                onClick={() => navigate("/guide")}
-                                                className="flex w-full items-center justify-between rounded-2xl bg-white/10 px-4 py-3.5 text-left transition hover:bg-white/15"
-                                            >
-                        <span>
-                          <span className="block text-sm text-white/60">Step 01</span>
-                          <span className="mt-1 block text-[15px] font-semibold">가이드 보기</span>
-                        </span>
-                                                <ArrowRightIcon />
-                                            </button>
-
-                                            <button
-                                                type="button"
-                                                onClick={() => navigate("/estimate")}
-                                                className="flex w-full items-center justify-between rounded-2xl bg-white/10 px-4 py-3.5 text-left transition hover:bg-white/15"
-                                            >
-                        <span>
-                          <span className="block text-sm text-white/60">Step 02</span>
-                          <span className="mt-1 block text-[15px] font-semibold">견적 만들기</span>
-                        </span>
-                                                <ArrowRightIcon />
-                                            </button>
-
-                                        </div>
-                                    </div>
+                                    <button
+                                        type="button"
+                                        onClick={() => navigate("/estimate")}
+                                        className="rounded-[20px] border border-white/25 bg-white/10 px-5 py-3.5 text-[15px] font-semibold text-white backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-white/15"
+                                    >
+                                        견적 만들기
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -243,17 +208,19 @@ export default function HomePage() {
                     {featureCards.map((card) => (
                         <div
                             key={card.title}
-                            className="rounded-[24px] bg-white p-5 shadow-[0_10px_30px_rgba(15,23,42,0.05)] ring-1 ring-black/5 transition hover:-translate-y-1 whitespace-pre-line"
+                            className="whitespace-pre-line rounded-[24px] bg-white p-5 shadow-[0_10px_30px_rgba(15,23,42,0.05)] ring-1 ring-black/5 transition hover:-translate-y-1"
                         >
-              <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
-                {card.badge}
-              </span>
+                            <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+                                {card.badge}
+                            </span>
 
                             <h2 className="mt-4 text-[20px] font-semibold tracking-[-0.03em] text-slate-950">
                                 {card.title}
                             </h2>
 
-                            <p className="mt-3 text-[14px] leading-7 text-slate-600">{card.description}</p>
+                            <p className="mt-3 text-[14px] leading-7 text-slate-600">
+                                {card.description}
+                            </p>
                         </div>
                     ))}
                 </section>
